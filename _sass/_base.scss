@@ -51,6 +51,11 @@ p {
     color: white;
 }
 
+.bg-light {
+  background-color: $theme-light;
+  color: black;
+}
+
 .text-faded {
     color: rgba(white, .7);
 }
@@ -59,7 +64,7 @@ section {
     padding: 100px 0;
 }
 
-aside {
+footer {
     padding: 50px 0;
 }
 
@@ -152,10 +157,12 @@ aside {
 header {
     position: relative;
     width: 100%;
-    min-height: auto;
+    //max-height: 648px;
+    //min-height: auto;
     @include background-cover;
     background-position: center;
     background-image: url('../img/header.png');
+    //margin-bottom: 100px;
     text-align: center;
     color: white;
     .header-content {
@@ -179,6 +186,44 @@ header {
                 font-size: 16px;
                 margin-bottom: 50px;
             }
+            form {
+              width: 80%;
+              margin: auto;
+
+              label {
+                color: $theme-primary;
+              }
+
+              input {
+                text-align: center;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                background-color: rgba(255, 255, 255, 0.48);
+              }
+
+              button {
+                margin-top: 15px;
+              }
+
+              ::-webkit-input-placeholder {
+                 color: $theme-primary;
+                 text-align: center;
+              }
+
+              :-moz-placeholder { /* Firefox 18- */
+                 color: $theme-primary;
+                 text-align: center;
+              }
+
+              ::-moz-placeholder {  /* Firefox 19+ */
+                 color: $theme-primary;
+                 text-align: center;
+              }
+
+              :-ms-input-placeholder {
+                 color: $theme-primary;
+                 text-align: center;
+              }
+            }
         }
     }
     @media (min-width: 768px) {
@@ -199,6 +244,10 @@ header {
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
+                }
+                form {
+                  width: 50%;
+                  margin:auto;
                 }
             }
         }
@@ -316,10 +365,40 @@ header {
 }
 
 // Contact
+#contact {
+  .mobile-hide {
+    display: none;
+  }
+
+  .col-lg-5 {
+    margin-top: 50px;
+  }
+
+  form {
+    width: 80%;
+    margin: auto;
+
+    button {
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .mobile-hide {
+      display: block;
+    }
+  }
+}
+
 #contact .fa {
     color: $theme-dark;
     font-size: 4em;
 }
+
+.img-responsive {
+  margin: auto;
+}
+
 
 // Extras
 // -- Highlight Color Customization
